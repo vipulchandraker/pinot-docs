@@ -155,7 +155,9 @@ By default, Pinot uses the value in the time column (`timeColumn` in tableConfig
 
 For partial upsert table, the out-of-order events won't be consumed and indexed. For example, for two records with the same primary key, if the record with the smaller value of the comparison column came later than the other record, it will be skipped.
 
+{% hint style="info" %}
 NOTE: Please use `comparisonColumns` for single comparison column instead of `comparisonColumn` as it is currently deprecated. You may see unrecognizedProperties when using the old config, but it's converted to comparisonColumns automatically when adding the table.
+{% endhint %}
 
 #### Multiple comparison columns
 
