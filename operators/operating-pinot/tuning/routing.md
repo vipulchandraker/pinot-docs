@@ -12,8 +12,8 @@ An easy-to-understand scenario is the impact of a full GC on a server. Let say a
 
 To improve the tail latency, Apache Pinot provides two techniques at routing level:
 
-* Reduce the query fanout by exploding data distribution.
-* Reduce the query fanout by exploding data replication.
+* Reduce the query fanout by exploiting data distribution.
+* Reduce the query fanout by exploiting data replication.
 
 ### Reduce query fanout by exploiting data distribution
 
