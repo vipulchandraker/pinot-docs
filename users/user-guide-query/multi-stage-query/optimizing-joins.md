@@ -5,7 +5,7 @@ description: Tips and tricks that can be used to optimize joins
 # Optimizing joins
 
 {% hint style="info" %}
-Remember to read the [join operator](operator-types/hash\_join.md) page to have a more in deep view of how joins are implemented
+Remember to read the [join operator](operator-types/hash_join.md) page to have a more in deep view of how joins are implemented
 {% endhint %}
 
 ### The order of input relations matter
@@ -158,4 +158,3 @@ Currently the lookup join comes with the following prerequisites/limitations:
 
 * Right table must be configured as a dimension table.
 * Primary key of the right table must be used as the join key. If the primary key is a compound key of multiple columns, all the columns must be used as the join key.
-* No extra filter is allowed on the right table.
