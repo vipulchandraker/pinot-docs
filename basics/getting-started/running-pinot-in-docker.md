@@ -319,6 +319,16 @@ services:
       retries: 5
       start_period: 10s
 
+  pinot-minion:
+    image: ${PINOT_IMAGE:-apachepinot/pinot:1.2.0}
+    command: "StartMinion -zkAddress zookeeper-houseprices:2181"
+    restart: unless-stopped
+    container_name: "pinot-minion"
+    depends_on:
+      - pinot-broker
+    networks: 
+      - pinot-demo
+
 networks:
   pinot-demo:
     name: pinot-demo
